@@ -1,19 +1,20 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="light">
     <ion-title>
-      DIE
+      The Doorway Experience
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">DIE</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
 
-  <div id="container">
-    <strong>He is ready</strong>
-  </div>
+  <h5>Transition to:</h5>
+
+  <ion-slides pager="false" [options]="slideOptions" #slideWithNav
+    (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)">
+    <ion-slide *ngFor="let s of sliderOne.slidesItems">
+      <img src="../../assets/images/{{s.id}}.png">
+    </ion-slide>
+  </ion-slides>
+
 </ion-content>
