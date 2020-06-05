@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      TESTS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-button class="ut" expand="block" *ngFor="let test of tests" [routerLink]="['./', test.title]">
+      {{test.title}}
+    </ion-button>
+  </div>
+</ion-content>

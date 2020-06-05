@@ -1,0 +1,12 @@
+body{
+  background-color: wheat;
+}
+
+#test_instructions{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-width: 10;
+}
