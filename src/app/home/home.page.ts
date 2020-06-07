@@ -248,7 +248,7 @@ export class HomePage {
 
   changePage(img_text) {
     console.log(img_text)
-    this.router.navigate(['/player'], {queryParams: {fromMode: this.fromMode, toMode: img_text}}); //params[fromMode: currentMode, toMode: clickedSquare]
+    this.router.navigate(['/confirm'], {queryParams: {fromMode: this.fromMode, toMode: img_text}}); //params[fromMode: currentMode, toMode: clickedSquare]
   }
 
   
