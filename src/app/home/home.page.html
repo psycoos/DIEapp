@@ -12,7 +12,7 @@
 
   <ion-slides pager="false" [options]="slideOptions" #slideWithNav
     (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)">
-    <ion-slide *ngFor="let s of sliderOne.slidesItems">
+    <ion-slide *ngFor="let s of sliderOne.slidesItems" (click)="this.changePage(s.id)">
       <img src="../../assets/images/{{s.id}}.png">
     </ion-slide>
   </ion-slides>

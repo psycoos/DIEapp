@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonSlides } from '@ionic/angular';
+import { Router, ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,9 @@ import { IonSlides } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  fromMode: any;
+	toMode: any;
+	sub: any;
 
   @ViewChild('slideWithNav', { static: false }) slideWithNav: IonSlides;
 
@@ -170,6 +174,8 @@ export class HomePage {
   }
 
   constructor(
+    private route: ActivatedRoute, 
+    private router: Router
   ) {
     this.sliderOne =
     {
@@ -177,16 +183,16 @@ export class HomePage {
       isEndSlide: false,
       slidesItems: [
         {
-          id: 1
+          id: 'work'
         },
         {
-          id: 2
+          id: 'sleep'
         },
         {
-          id: 3
+          id: 'leisure'
         },
         {
-          id: 4
+          id: 'workout'
         }
       ]
     };
@@ -228,5 +234,23 @@ export class HomePage {
       object.isEndSlide = istrue;
     });
   }
+
+
+  ionViewDidEnter() {
+  	console.log('2');
+  	this.sub = this.route.queryParams.subscribe(params => {
+	    this.fromMode = params['toMode'] || 'leisure';
+      // this.toMode = params['toMode'];
+      console.log(params['toMode'])
+      console.log(this.fromMode)
+		});
+  }
+
+  changePage(img_text) {
+    console.log(img_text)
+    this.router.navigate(['/player'], {queryParams: {fromMode: this.fromMode, toMode: img_text}}); //params[fromMode: currentMode, toMode: clickedSquare]
+  }
+
+  
 
 }
