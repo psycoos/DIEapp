@@ -8,13 +8,18 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'player',
     pathMatch: 'full'
   },
   {
     path: 'player',
     loadChildren: () => import('./player/player.module').then( m => m.PlayerPageModule)
+  },  {
+    path: 'transition-to',
+    loadChildren: () => import('./transition-to/transition-to.module').then( m => m.TransitionToPageModule)
   },
+
+  
 ];
 
 @NgModule({

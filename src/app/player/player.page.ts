@@ -22,8 +22,8 @@ export class PlayerPage implements OnInit {
   ngOnInit() {
   	console.log('2');
   	this.sub = this.route.params.subscribe(params => {
-	    this.fromMode = 'leisure';//params['fromMode']; 
-	    this.toMode = 'work';//params['toMode']; 
+	    this.fromMode = 'sleep';//params['fromMode']; 
+	    this.toMode = 'workout';//params['toMode']; 
 		});
 		this.transition = '/assets/'+this.fromMode+"to"+this.toMode+'.wav';
 	
