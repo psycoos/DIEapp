@@ -8,5 +8,13 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   constructor() {}
+    
+    leisureClicked() {
+
+    }
+    sleepClicked(){
+  
+
+  }
 
 }

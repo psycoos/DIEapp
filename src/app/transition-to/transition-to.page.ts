@@ -10,15 +10,6 @@ export class TransitionToPage implements OnInit {
 
   constructor() { }
   
-  leisureClicked() {
-
-  }
-  sleepClicked(){
-
-  }
-  WorkoutClicked(){
-    
-  }
 
   ngOnInit() {
   }
