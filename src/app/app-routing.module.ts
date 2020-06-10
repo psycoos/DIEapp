@@ -14,11 +14,17 @@ const routes: Routes = [
   {
     path: 'player',
     loadChildren: () => import('./player/player.module').then( m => m.PlayerPageModule)
-  },  {
+  },
+  {
     path: 'confirm',
     loadChildren: () => import('./confirm/confirm.module').then( m => m.ConfirmPageModule)
   },
+  {
+    path: 'transition-to',
+    loadChildren: () => import('./transition-to/transition-to.module').then( m => m.TransitionToPageModule)
+  },
 
+  
 ];
 
 @NgModule({
