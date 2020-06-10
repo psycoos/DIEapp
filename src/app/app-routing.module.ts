@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'first-time',
     pathMatch: 'full'
   },
   {
@@ -23,6 +23,11 @@ const routes: Routes = [
     path: 'transition-to',
     loadChildren: () => import('./transition-to/transition-to.module').then( m => m.TransitionToPageModule)
   },
+  {
+    path: 'first-time',
+    loadChildren: () => import('./first-time/first-time.module').then( m => m.FirstTimePageModule)
+  },
+
 
   
 ];
