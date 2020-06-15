@@ -27,9 +27,19 @@ const routes: Routes = [
     path: 'first-time',
     loadChildren: () => import('./first-time/first-time.module').then( m => m.FirstTimePageModule)
   },
-
-
-  
+  {
+    path: 'test',
+    children: [
+    {
+      path: '',
+      loadChildren: () => import('./test/test.module').then( m => m.TestPageModule)
+    },
+    {
+      path: 'testTitle',
+      loadChildren: () => import('./test/test-detail/test-detail.module').then( m => m.TestDetailPageModule)
+    }
+    ]
+  }
 ];
 
 @NgModule({
