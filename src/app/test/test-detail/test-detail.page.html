@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      TESTS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="test_instructions">
+    <ion-header>
+      {{ loadedTest.title }}
+    </ion-header>
+    <div text-center *ngFor="let ins of loadedTest.instructions">
+      {{ ins }}  
+    </div>
+  </div>
+</ion-content>
