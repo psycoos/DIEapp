@@ -13,14 +13,43 @@
 @import "~@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
+
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
 @import '~@ionic/angular/css/display.css';
 
+
 /* Optional CSS utils that can be commented out */
+
 @import "~@ionic/angular/css/padding.css";
 @import "~@ionic/angular/css/float-elements.css";
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+.containerHeading2 {
+  position:absolute;
+  font-size: 35px;
+  padding: 40px;
+  bottom:70%;
+  top:10%;
+  width: 100%;
+  border: none;
+  text-align: center;
+  display: inline-block;
+  vertical-align:middle;
+}
+
+.lowerButton {
+  position:absolute;
+  bottom:10%;
+  top:80%;
+  margin: auto;
+  padding: 20px;
+  width: 100%;
+  border: none;
+  text-align: center;
+}
+

@@ -1,14 +1,13 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="light">
-    <ion-title>
-      The Doorway Experience
-    </ion-title>
+<ion-header>
+  <ion-toolbar class={{fromMode}}>
+    <ion-title>The Doorway Experience</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="ion-padding">
-
-  <h5>Transition to:</h5>
+<ion-content>
+<div class="containerHeadingHome">
+  <t>Transition to:</t>
+</div>
 
   <ion-slides pager="false" [options]="slideOptions" #slideWithNav
     (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)">
@@ -16,5 +15,9 @@
       <img src="../../assets/images/{{s.id}}.png">
     </ion-slide>
   </ion-slides>
+
+  <div class="lowerButton">    <!-- to check the mode-->
+    {{fromMode}}
+  </div>
 
 </ion-content>

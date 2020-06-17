@@ -74,6 +74,37 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+    /** sleep **/
+    --ion-color-sleep: #AAEDFF;
+    --ion-color-sleep-rgb: 170,237,255;
+    --ion-color-sleep-contrast: #000000;
+    --ion-color-sleep-contrast-rgb: 0, 0, 0;
+
+    /** work  **/
+    --ion-color-work: #0011FF;
+    --ion-color-work-rgb: 0,17,255;
+    --ion-color-work-contrast: #000000;
+    --ion-color-work-contrast-rgb: 0, 0, 0;
+
+    /** workout  **/
+    --ion-color-workout: #FE0A0A;
+    --ion-color-workout-rgb: 254,10,10;
+    --ion-color-workout-contrast: #000000;
+    --ion-color-workout-contrast-rgb: 0, 0, 0;
+
+    /** leisure  **/
+    --ion-color-leisure: #00FF3C;
+    --ion-color-leisure-rgb: 0,255,60;
+    --ion-color-leisure-contrast: #000000;
+    --ion-color-leisure-contrast-rgb: 0, 0, 0;
+
+    /** orange  **/
+    --ion-color-leisure: #FFB300;
+    --ion-color-leisure-rgb: 255,179,0;
+    --ion-color-leisure-contrast: #000000;
+    --ion-color-leisure-contrast-rgb: 0, 0, 0;
+
 }
 
 @media (prefers-color-scheme: dark) {

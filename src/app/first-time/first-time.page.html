@@ -1,21 +1,36 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>DIE</ion-title>
+    <ion-title>The Doorway Experience</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="container">
-    <img src="/assets/leisure.png"style="vertical-align:middle;margin:2px 2px" height="180">
-    <button ion-button full [color]="success" (click)="this.changePage('leisure')">
-      Leisure
-    </button>
+<div class="containerHeadingFirst">
+  <t>Which mode are you in right now?</t>
 </div>
 
-<div class="container1">
-  <img src="/assets/sleep.png"style="vertical-align:middle;margin:2px 2px" height="250" width="250">  
-  <button ion-button full [color]="success" (click)="this.changePage('sleep')">
-    Sleep 
-  </button>
+  <div class="containerFirst">
+    <ion-button size="large" color="light" shape="round" expand="full" (click)="this.changePage('leisure')">
+      LEISURE
+    </ion-button>
 </div>
+
+<div class="containerFirst">
+  <ion-button size="large" color="light" shape="round" expand="full" (click)="this.changePage('sleep')">
+    SLEEP
+  </ion-button>
+</div>
+
+  <div class="containerFirst">
+    <ion-button size="large" color="light" shape="round" expand="full" disabled="true">
+      WORKOUT
+    </ion-button>
+  </div>
+
+  <div class="containerFirst">
+    <ion-button size="large" color="light" shape="round" expand="full" disabled="true">
+      WORK
+    </ion-button>
+  </div>
+
 </ion-content>
