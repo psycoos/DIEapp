@@ -12,6 +12,7 @@ export class HomePage {
 	toMode: any;
 	sub: any;
 
+
   @ViewChild('slideWithNav', { static: false }) slideWithNav: IonSlides;
 
   sliderOne: any;
@@ -24,8 +25,11 @@ export class HomePage {
       shadowOffset: 20,
       shadowScale: 0.94,
     },
+
+
     on: {
       beforeInit: function () {
+        console.log(this.fromMode)
         const swiper = this;
         swiper.classNames.push(`${swiper.params.containerModifierClass}cube`);
         swiper.classNames.push(`${swiper.params.containerModifierClass}3d`);
@@ -237,12 +241,14 @@ export class HomePage {
 
 
   ionViewDidEnter() {
-  	console.log('2');
+  	console.log('1');
   	this.sub = this.route.queryParams.subscribe(params => {
 	    this.fromMode = params['toMode'] || 'leisure';
-      // this.toMode = params['toMode'];
+     //  this.toMode = params['toMode'];
       console.log(params['toMode'])
       console.log(this.fromMode)
+      console.log(this.toMode)
+
 		});
   }
 

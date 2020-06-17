@@ -1,34 +1,14 @@
-.button {
+ion-content {
+    --ion-background-color: #FFB300;
+    }
+
+.containerHeadingConfirm {
+  font-size: 35px;
+  position:absolute;
+  padding: 20px;
+  bottom:60%;
+  top:20%;
+  width: 100%;
   border: none;
-  color: white;
-  padding: 16px 32px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-
-.yesbutton {
-  background-color: #4CAF50;
-  color: black;
-  border: 2px solid #4CAF50;
-}
-
-.yesbutton:hover {
-  background-color: #33AF33;
-  color: white;
-}
-
-.nobutton {
-  background-color: #A27777;
-  color: black;
-  border: 2px solid #A27777;
-}
-
-.nobutton:hover {
-  background-color: #A23333;
-  color: white;
 }

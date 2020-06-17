@@ -1,7 +1,28 @@
+<ion-header [translucent]="true">
+	<ion-toolbar color="light">
+		<ion-title>
+			The Doorway Experience
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+
 <ion-content>
-	<audio autoplay (ended)='onEnd()'>
-		<source id='transitionAudio' src='{{transition}}' type="audio/WAV"> <!--unless we're using mp3-->
-	</audio>
-	<img src="/assets/Headphones.png"class=center>
+	<div class="containerHeading2">
+		<t style="color:#fff">Close your eyes...</t>
+
+	</div>
+
+
+	<div class="centerPlayer">
+		<audio controls style="width:80%" (ended)='onEnd()'>
+			<source id='transitionAudio' src='{{transition}}' type="audio/WAV"> <!--unless we're using mp3-->
+		</audio>
+	</div>
+
+	<div  class="lowerButton">
+		<ion-button size="large" color="light" shape="round">NEXT</ion-button>
+	</div>
+
 </ion-content>
  

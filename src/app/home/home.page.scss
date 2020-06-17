@@ -1,36 +1,24 @@
-.masters{
-  background: #ffffff;
-}
-/* Style the button and place it in the middle of the container/image */
-.container .btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: #555;
-  color: white;
-  font-size: 16px;
-  padding: 12px 24px;
+.containerHeadingHome {
+  margin: auto;
+  font-size: 35px;
+  padding: 10px;
+  height: 120px;
+  line-height: 120px;
+  width: 100%;
   border: none;
-  cursor: pointer;
-  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
 }
-.container1 .btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: #555;
-  color: white;
-  font-size: 16px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
+
+.sleep{
+    --background: #AAEDFF;
+    --color: #fff;
+
 }
-/* ion button color */
-ion-button {
-  --color: #ffd534;
+
+.leisure{
+    --background: #00FF3C;
+    --color: #fff;
 }
+

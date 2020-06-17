@@ -1,4 +1,22 @@
+<ion-header [translucent]="true">
+	<ion-toolbar color="light">
+		<ion-title>
+			The Doorway Experience
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+
 <ion-content>
-	<center><p>Please, put on your headphones, then walk through a doorway in your room.</p>
-		<button class="button yesbutton" (click)="onConfirm()">I did</button><button class="button nobutton" (click)="onDeny()">Skip this transition</button></center>
+<div class="container">
+
+</div>
+	<div class="containerHeadingConfirm">
+	<t style="color:#fff">Put your headphones on. Find a door that leads outside of your room and step through it.</t>
+	</div>
+	<div  class="lowerButton">
+		<ion-button size="large" color="light" shape="round" style="padding-right:7px" (click)="onConfirm()">READY</ion-button>
+		<ion-button size="large" color="light" shape="round" style="padding-left:7px" (click)="onDeny()">SKIP TRANSITION</ion-button>
+	</div>
+
 </ion-content>

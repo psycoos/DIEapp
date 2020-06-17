@@ -1,9 +1,14 @@
-.center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+.centerPlayer {
+  position:absolute;
+  bottom:45%;
+  top:45%;
+  margin: auto;
+  padding: 20px;
+  width: 100%;
+  border: none;
+  text-align: center;
 }
-body {background-color: charcoal;}
+
+ion-content {
+    --ion-background-color: #FFB300;
+    }
