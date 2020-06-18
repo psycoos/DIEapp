@@ -7,7 +7,8 @@ import { Router, ActivatedRoute} from '@angular/router';
   styleUrls: ['./first-time.page.scss'],
 })
 export class FirstTimePage implements OnInit {
-
+  condition: any;
+  sub: any;
   
 
   constructor(
@@ -18,9 +19,16 @@ export class FirstTimePage implements OnInit {
   ngOnInit() {
   }
 
+
+  ionViewWillEnter() {
+    this.sub = this.route.queryParams.subscribe(params => {
+      this.condition = params['testcondition'];
+    }); 
+  }
+
   changePage(img_text) {
     console.log(img_text)
-    this.router.navigate(['/home'], {queryParams: {toMode: img_text}}); //params[fromMode: currentMode, toMode: clickedSquare]
+    this.router.navigate(['/home'], {queryParams: {toMode: img_text, testcondition: this.condition}}); //params[fromMode: currentMode, toMode: clickedSquare]
   }
 
 }

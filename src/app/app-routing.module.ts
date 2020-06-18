@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'first-time',
+    redirectTo: 'test',
     pathMatch: 'full'
   },
   {
@@ -29,17 +29,23 @@ const routes: Routes = [
   },
   {
     path: 'test',
-    children: [
-    {
-      path: '',
-      loadChildren: () => import('./test/test.module').then( m => m.TestPageModule)
-    },
-    {
-      path: 'testTitle',
-      loadChildren: () => import('./test/test-detail/test-detail.module').then( m => m.TestDetailPageModule)
-    }
-    ]
+    loadChildren: () => import('./test/test.module').then( m => m.TestPageModule)
+    // children: [
+    // {
+    //   path: '',
+    //   loadChildren: () => import('./test/test.module').then( m => m.TestPageModule)
+    // },
+    // {
+    //   path: 'testTitle',
+    //   loadChildren: () => import('./test/test-detail/test-detail.module').then( m => m.TestDetailPageModule)
+    // }
+    // ]
+  },
+  {
+    path: 'outro',
+    loadChildren: () => import('./outro/outro.module').then( m => m.OutroPageModule)
   }
+
 ];
 
 @NgModule({

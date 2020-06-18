@@ -11,6 +11,7 @@ export class HomePage {
   fromMode: any;
 	toMode: any;
 	sub: any;
+  condition: any;
 
 
   @ViewChild('slideWithNav', { static: false }) slideWithNav: IonSlides;
@@ -244,6 +245,7 @@ export class HomePage {
   	console.log('1');
   	this.sub = this.route.queryParams.subscribe(params => {
 	    this.fromMode = params['toMode'] || 'leisure';
+      this.condition = params['testcondition'];
      //  this.toMode = params['toMode'];
       console.log(params['toMode'])
       console.log(this.fromMode)
@@ -254,7 +256,7 @@ export class HomePage {
 
   changePage(img_text) {
     console.log(img_text)
-    this.router.navigate(['/confirm'], {queryParams: {fromMode: this.fromMode, toMode: img_text}}); //params[fromMode: currentMode, toMode: clickedSquare]
+    this.router.navigate(['/confirm'], {queryParams: {fromMode: this.fromMode, toMode: img_text, testcondition: this.condition}}); //params[fromMode: currentMode, toMode: clickedSquare]
   }
 
   
