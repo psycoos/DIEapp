@@ -10,6 +10,7 @@ export class ConfirmPage implements OnInit {
 	fromMode: any;
 	toMode: any;
 	sub: any;	 
+	instruction1: any;
   transitions = ['sleeptowork', 'leisuretosleep', 'sleeptoworkout', 'leisuretowork'];
   condition: any;
   
@@ -20,11 +21,27 @@ export class ConfirmPage implements OnInit {
 	    this.fromMode = params['fromMode']; 
 		  this.toMode = params['toMode']; 
       this.condition = params['testcondition'];
-  		console.log(this.toMode); 
-  		console.log(this.fromMode);
+  		console.log("toMode:" + this.toMode); 
+  		console.log("fromMode: " + this.fromMode);
   		if (this.transitions.indexOf(this.fromMode+"to"+this.toMode) == -1) {
   			this.router.navigate(['/home'], {queryParams: {toMode: this.toMode}});
   		}
+		
+ 	if (this.condition == 1 && this.toMode != "sleep"){
+		
+		this.instruction1 = "Put your headphones on. Find a door that leads outside of your room and step through it.";
+	
+	} else if (this.condition == 2 && this.toMode != "sleep") {
+		
+		this.instruction1 = "Put your headphones on. Find a door that leads outside of your room. Step through it, take a deep breath and step back in.";
+	} else if (this.condition == 3 && this.toMode != "sleep"){
+		this.instruction1 = "Put your headphones on and go stand in the middle of your room.";
+	} else if (this.toMode == "sleep"){
+		this.instruction1 = "Put your headphones on. Find a door that leads outside of your room and step through it.";
+	} else {
+		this.instruction1 = "somehting went wrong";
+	}		
+		
 	  });
   }
 
