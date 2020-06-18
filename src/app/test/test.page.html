@@ -7,9 +7,16 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div id="container">
-    <ion-button class="ut" expand="block" *ngFor="let test of tests" [routerLink]="['./', test.title]">
-      {{test.title}}
+  <div>
+    <ion-button class="ut" expand="block" (click)="onclick(1)">
+      Condition 1
+    </ion-button>
+  <div>
+    <ion-button class="ut" expand="block" (click)="onclick(2)">
+      Condition 2
+    </ion-button>
+  <div>
+    <ion-button class="ut" expand="block" (click)="onclick(3)">
+      Condition 3
     </ion-button>
   </div>
-</ion-content>
