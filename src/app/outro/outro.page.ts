@@ -13,7 +13,7 @@ export class OutroPage implements OnInit {
 	instruction: any;
 	transition: string;//'/assets/'+this.fromMode+"to"+this.toMode+'.wav';
 	condition: any;
-	instruction = " ";
+	
 
 
   transitions = ['sleeptowork', 'leisuretosleep', 'sleeptoworkout', 'leisuretowork'];
@@ -43,12 +43,12 @@ export class OutroPage implements OnInit {
 	} else if (this.toMode == "sleep"){
 		this.instruction = "Go stand in front of a chair or couch and close your eyes...";
 	} else {
-		this.instruction = "somehting went wrong";
+		this.instruction = "something went wrong";
 	}
 		
 
 	});
-		this.transition = '/assets/'+this.fromMode+"to"+this.toMode+'outro.wav';
+		this.transition = '/assets/intro-outro.wav';
    }
    
 

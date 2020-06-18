@@ -39,7 +39,7 @@ export class ConfirmPage implements OnInit {
 	} else if (this.toMode == "sleep"){
 		this.instruction1 = "Put your headphones on. Find a door that leads outside of your room and step through it.";
 	} else {
-		this.instruction1 = "somehting went wrong";
+		this.instruction1 = "something went wrong";
 	}		
 		
 	  });
