@@ -48,7 +48,7 @@ export class OutroPage implements OnInit {
 		
 
 	});
-		this.transition = '/assets/intro-outro.wav';
+		this.transition = '/assets/'+this.fromMode+"to"+this.toMode+'outro.wav';
    }
    
 
