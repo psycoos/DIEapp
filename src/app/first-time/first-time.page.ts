@@ -22,7 +22,7 @@ export class FirstTimePage implements OnInit {
 
   ionViewWillEnter() {
     this.sub = this.route.queryParams.subscribe(params => {
-      this.condition = params['testcondition'];
+      this.condition = 2;
     }); 
   }
 

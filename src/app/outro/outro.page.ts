@@ -41,7 +41,7 @@ export class OutroPage implements OnInit {
 	} else if (this.condition == 3 && this.toMode != "sleep"){
 		this.instruction = "Find a door that leads outside of your room and step through it. When you're ready, press play";
 	} else if (this.toMode == "sleep"){
-		this.instruction = "Go stand in front of a chair or couch and close your eyes...";
+		this.instruction = "Go stand in your room and close your eyes...";
 	} else {
 		this.instruction = "something went wrong";
 	}

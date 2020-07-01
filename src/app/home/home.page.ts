@@ -249,7 +249,7 @@ export class HomePage {
      //  this.toMode = params['toMode'];
       console.log(params['toMode'])
       console.log(this.fromMode)
-      console.log(this.toMode)
+      console.log("conditon: " + this.condition);
 
 		});
   }

@@ -18,14 +18,16 @@ export class ConfirmPage implements OnInit {
 
   ionViewWillEnter() {
   	this.sub = this.route.queryParams.subscribe(params => {
-	    this.fromMode = params['fromMode']; 
-		  this.toMode = params['toMode']; 
-      this.condition = params['testcondition'];
-  		console.log("toMode:" + this.toMode); 
-  		console.log("fromMode: " + this.fromMode);
-  		if (this.transitions.indexOf(this.fromMode+"to"+this.toMode) == -1) {
-  			this.router.navigate(['/home'], {queryParams: {toMode: this.toMode}});
-  		}
+		this.fromMode = params['fromMode']; 
+		this.toMode = params['toMode']; 
+    	this.condition = params['testcondition'];
+  		console.log("toMode: " + this.toMode); 
+		console.log("fromMode: " + this.fromMode);
+		console.log("conditon: " + this.condition);
+		  
+  	if (this.transitions.indexOf(this.fromMode+"to"+this.toMode) == -1) {
+  			this.router.navigate(['/home'], {queryParams: {toMode: this.toMode, fromMode: this.fromMode, testcondition: this.condition}});
+  	}
 		
  	if (this.condition == 1 && this.toMode != "sleep"){
 		
@@ -57,6 +59,6 @@ export class ConfirmPage implements OnInit {
   onDeny() {
 	  // console.log('1')
 	  // console.log(this.toMode)
-  	this.router.navigate(['/home'], {queryParams: {toMode: this.toMode, testcondition: this.condition}});
+  	this.router.navigate(['/home'], {queryParams: {toMode: this.toMode, fromMode: this.fromMode, testcondition: this.condition}});
   }
 }
